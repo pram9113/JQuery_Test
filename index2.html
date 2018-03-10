@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>JQuery Test-Pramadia </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
@@ -120,6 +120,75 @@
                 $('.note2').toggle(1000, function(){
                     alert('Tombol Ditekan!');
                 });
+            });
+        });
+    </script>
+    <!--Event Double Click-->
+    <p>->Event Double Click</p>
+    <button id="tombol7">Tombol 7</button>
+    <p class="note3">Halo Dunia</p>
+    <script>
+        $(document).ready(function(){
+            $('#tombol7').dblclick(function(){
+                $('.note3').toggle();
+            });
+        });
+    </script>
+    <!--Hover-->
+    <p>->Hover</p>
+    <button id="tombol8">Tombol 8</button>
+    <p class="note4">Halo Dunia</p>
+    <script>
+        $(document).ready(function(){
+            $('#tombol8').hover(function(){
+                $('.note4').toggle();
+            });
+        });
+    </script>
+    <!--Mouse Move-->
+    <p>->Mouse Move</p>
+    <button id="tombol9">Tombol 9</button>
+    <p class="note5">Halo Dunia</p>
+    <script>
+        $(document).ready(function(){
+            $('#tombol9').on('mousemove',function(){
+                $('.note5').toggle();
+            });
+        });
+    </script>
+    <!--Mouse up and down-->
+    <p>->Mouse up and down</p>
+    <button id="tombol10">Tombol 10</button>
+    <p class="note6">Halo Dunia</p>
+    <script>
+        $(document).ready(function(){
+            $('#tombol10').on('mousedown',function(){
+                $('.note6').toggle();
+            });
+            $('#tombol9').on('mouseup',function(){
+                $('.note6').toggle();
+            });
+        });
+    </script>
+    <!--Get User Input-->
+    <p>->Get user input</p>
+    <input type="text">
+    <script>
+        $(document).ready(function(){
+            $('input').keyup(function(){
+                console.log(x.target.value);
+            });
+        });
+    </script>
+    <!--Select Form-->
+    <select id="sex">
+        <option value="Pria">Laki laki</option>
+        <option value="Wanita">Perempuan</option>
+    </select>
+    <script>
+        $(document).ready(function(){
+            $('select#sex').change(function(pilih){
+                alert(pilih.target.value);
             });
         });
     </script>
