@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test-JQuery-DOM-AJAX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+    
+    </style>
+</head>
+<body>
+    <div id="app">Hello World</div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+
+    <script>
+        window.YOUTUBE_API_KEY = "AIzaSyAnfIZJcosbw21zzJVVQq0AHcte3tdfGeA";
+        window.q = "raisa"
+        var url = 'https://www.googleapis.com/youtube/v3/search?type=video&part=snippet&key='+window.YOUTUBE_API_KEY+'&q='+encodeURI(q);
+    </script>
+</body>
+</html>

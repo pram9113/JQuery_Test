@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <script src="JS/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <!--JQuery Code -->
+    <h1>Test JQuery</h1>
+    <script>
+        $(document).ready(function() {
+            //$('h1').hide();
+            $('h1').show();
+            //$('*').hide();
+        })
+    </script>
+    <!--Selectors-->
+    <h2 class="iniclass">Halo JQuery</h2>
+    <h2 id="iniid">JQuery Bagus</h2>
+    <p>Mastering <span>JQuery</span>!</p>
+    <script>
+        $(document).ready(function(){
+            $('.iniclass').css('color','blue');
+            $('#iniid').css('color','red');
+            $('p span').css('color','pink')
+        })
+    </script>
+    <!--Selectors2-->
+    <h3 class="iniclass2">Haloo</h3>
+    <script>
+        $(document).ready(function(){
+            $('.iniclass2').css({color:'white', background:'black'});
+        })
+    </script>
+    <!--Nested Selectors-->
+    <ul class="daftar">
+        <li>Andi</li>
+        <li>Budi</li>
+        <li>Caca</li>
+        <li>Dondi</li>
+    </ul>
+    <script>
+        $(document).ready(function(){
+            $('.daftar').css('background-color','black');
+            $('.daftar li:first').css('color','red');
+            $('.daftar li:last').css('color','white');
+            //$('.daftar li:even').css('color','red');
+            //$('.daftar li:odd').css('color','blue');
+        })
+    </script>
+    <!-- Attribute Selectors-->
+    <p><input type="text" value="ketik disini"></p>
+    <p><input type="submit" value="Tombol 1"></p>
+    <p><input type="button" value="Tombol 2"></p>
+    <p><a href="http://www.google.com">Link 1</a></p>
+    <p><a href="http://www.yahoo.com">Link 2</a></p>
+    <script>
+        $(document).ready(function(){
+            //$(':text').hide();
+            //$(':submit').hide();
+            //$(':button').hide();
+            $('[href]').css('color','red');
+            $('a[href="http://yahoo.com"]').css('color','pink');
+        });
+    </script>
+    <!--Event click alert-->
+    <p><underline>Event Click Alert</underline></p>
+    <button id="tombol1">Tombol 1</button>
+    <button id="tombol2">Tombol 2</button>
+    <script>
+        $(document).ready(function(){
+            $('#tombol1').click(function(){
+                alert('Tombol 1 Ditekan');
+            });
+            $('#tombol2').on('click',function(){
+                alert('Tombol 2 Ditekan');
+            });
+        });
+    </script>
+    <br>
+    <br>
+    <!--Event Click Show and Hide-->
+    <p>->Event Click Show and Hide--> attention to Halo Dunia</p>
+    <button id="tombol3">Hide</button>
+    <button id="tombol4">Show</button>
+    <p class="note">Halo Dunia</p>
+    <script>
+        $(document).ready(function(){
+            $('#tombol3').click(function(){
+                $('.note').hide();
+            });
+            $('#tombol4').on('click',function(){
+                $('.note').show();
+            });
+        });
+    </script>
+    <!--Event Click Toggle-->
+    <p>->Event Click Toggle</p>
+    <button id="tombol5">tombol 5</button>
+    <p class="note1">Halo Dunia</p>
+    <script>
+        $(document).ready(function(){
+            $('#tombol5').click(function(){
+                $('.note1').toggle();
+            });
+        });
+    </script>
+    <!--Event click toggle with delay-->
+    <p>->Event click toggle with delay</p>
+    <button id="tombol6">Tombol 6</button>
+    <p class="note2">Halo Dunia</p>
+    <script>
+        $(document).ready(function(){
+            $('#tombol6').click(function(){
+                $('.note2').toggle(1000, function(){
+                    alert('Tombol Ditekan!');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
