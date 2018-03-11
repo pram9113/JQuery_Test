@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DOM-AJAX-JQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <script src="JS/Jquery-3.3.1.min.js"></script>
+    <style>
+        .myClass {
+            color: blue;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+        <div id="container">
+            <button id="btn1">Try Me</button>
+            <p class="para1">Ini Paragraf 1</p>
+            <p class="para2">Ini Paragraf 2</p>
+        </div>
+        <!--DOM Manipulation, Add/Remove class-->
+        <script>
+            $('document').ready(function(){
+                $('p.para1').css({color:'red',background:'yellow'});
+                $('p.para2').addClass('myClass');
+                //$('p.para2').removeClass('myClass');
+            })
+        </script>
+        <!--DOM Manipulation, Toggle class-->
+        <script>
+            $('document').ready(function(){
+                $('#btn1').click(function(){
+                    $('p.para1').toggle('myClass');
+                    $('p.para2').toggle('myClass');
+                })
+            })
+        </script>
+        <!--DOM Manipulation, Set Content Value-->
+        <div id="myDiv"></div>
+        <script>
+            $('document').ready(function(){
+                $('#myDiv').text('Halo Semuanya');
+                $('#myDiv').html('<h1>Halo!</h1>');
+                alert($('#myDiv')).text();
+            })
+        </script>
+        <!--DOM Manipulation, Append and Prepend-->
+        <p class="para3">Ini Paragraf 3</p>
+        <p class="para4">Ini Paragraf 4</p>
+        <ul>
+            <li>Ini List 1</li>
+            <li>Ini List 2</li>
+            <li>Ini List 3</li>
+        </ul>
+        <script>
+            $('document').ready(function(){
+                //$('.para3').appendTo('.para4');
+                //$('.para3').prependTo('.para4');
+                $('ul').append('<li>Ini append list tambahan</li>');
+                //$('ul').prepend('<li>Ini prepend list</li>');
+                $('ul').before('<h4>Berikut adalah list:</h4>');
+                //$('ul').after('<h4>Demikianlah list diatas</h4>');
+                //$('ul').empty();
+                //$('ul').detach();
+            })
+        </script>
+</body>
+</html>
