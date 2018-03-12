@@ -110,6 +110,74 @@
                 })
             })
         </script>
-
+        <!--Print Array on Web Page-->
+        <p>->Print Array on Web Page</p>
+        <ul id="users"></ul>
+        <script>
+            $('document').ready(function(){
+                var myArr = ['Andi','Budi','Caca'];
+                $.each(myArr, function(i,x){
+                    $('#users').append('<li>'+x+'</li>');
+                })
+            })
+        </script>
+        <!--Convert list to Array-->
+        <p>->Convert List to Array</p>
+        <ul id="list">
+            <li>Andi</li>
+            <li>Budi</li>
+            <li>Caca</li>
+        </ul>
+        <script>
+            $('document').ready(function(){
+                var newArr = $('ul#list li').toArray();
+                $.each(newArr, function(i,val){
+                    console.log(val.innerHTML);
+                })
+            })
+        </script>
+        <!--Javascript Key Codes-->
+        <p>Javascript Key Codes</p>
+        <input type="text">
+        <script>
+            $('document').ready(function(){
+                $('input').keyup(function(x){
+                    var code = x.which;
+                    console.log(code);
+                })
+            })
+        </script>
+        <!--Input and Add List-->
+        <p>->Input and Add List</p>
+        <input type="text" id="newItem">
+        <ol></ol>
+        <script>
+            $(document).ready(function(){
+                $('#newItem').keyup(function(x){
+                    var code = x.which;
+                    if(code==13){;
+                    x.preventDefault();
+                    $('ol').append('<li>'+x.target.value+ '</li>');
+                    };
+                });
+            });
+        </script>
+        <!--Input, Add List and Refresh-->
+        <p>->Input Add List and Refresh</p>
+        <input type="text" id="newItem2">
+        <ol></ol>
+        <script>
+            $(document).ready(function(){
+                $('#newItem2').keyup(function(x){
+                    var code = x.which;
+                    if(code==13) {
+                        x.preventDefault()
+                        $('ol').append('<li>' +x.target.value+ '</li>')
+                        $(':text').val('');
+                        x.target.value = '';
+                    }
+                })
+            })
+        </script>
 </body>
 </html>
