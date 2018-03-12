@@ -21,15 +21,29 @@
 </head>
 <body>
     <div id="container">
-        <button id="btn1">Tombol1</button>
-        <button id="btn2">Tombol2</button>
-        <button id="btn3">Tombol3</button>
+        <button id="btn1">Fade Out</button>
+        <button id="btn2">Fade In</button>
+        <button id="btn3">Fade Toggle</button>
         <hr>
         <div id="box"><h1>Halo Semuanya!</h1></div>
     </div>
     <script>
         $(document).ready(function(){
 
+        })
+    </script>
+    <!--Script Efek Animasi-->
+    <script>
+        $(document).ready(function(){
+            $('#btn1').click(function(){
+                $('#box').fadeOut()
+            })
+            $('#btn2').click(function(){
+                $('#box').fadeIn()
+            })
+            $('#btn3').click(function(){
+                $('#box').fadeToggle()
+            })
         })
     </script>
 </body>
