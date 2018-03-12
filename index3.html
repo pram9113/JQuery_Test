@@ -67,5 +67,49 @@
                 //$('ul').detach();
             })
         </script>
+        <!--DOM Manipulation, Append and Prepend 2 -->
+        <p class="para5">Ini Paragraf 5</p>
+        <p class="para6">Ini Paragraf 6</p>
+        <ul>
+            <li>Ini List 1</li>
+            <li>Ini List 2</li>
+            <li>Ini List 3</li>
+        </ul>
+        <script>
+            $('document').ready(function(){
+                var x = ('.para5').text();
+                $('ul').append('<li>' + x + '</li>');
+            });
+        </script>
+        <!--DOM Manipulation, Add Attribute-->
+        <p>->DOM Manipulation, Add Attribute</p>
+        <a href="http://www.google.com">Klik Me!</a>
+        <script>
+            $('document').ready(function(){
+                //$('a').attr('target', '_blank');
+                alert($('a').attr('href')); //alert function
+                $('a').removeAttr('target');
+            })
+        </script>
+        <!--Wrap Elements-->
+        <p>->Wrap Element</p>
+        <p class="para7">Ini Paragraf 7</p>
+        <p class="para8">Ini Paragraf 8</p>
+        <script>
+            $('document').ready(function(){
+                //$('.para7').wrap('<h1>');
+                //$('p').wrapAll('<h1>');        
+            })
+        </script>
+        <!--DOM Manipulation, print array on console-->
+        <script>
+            $('document').ready(function(){
+                var myArr = ['Andi','Budi','Caca'];
+                $.each(myArr, function(i,val){
+                    console.log(val);
+                })
+            })
+        </script>
+
 </body>
 </html>
